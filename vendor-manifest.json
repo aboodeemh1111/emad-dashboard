@@ -1,0 +1,282 @@
+{
+  "src/panels/emad-dashboard/appliance-model.ts": {
+    "sourceSha256": "5441638c8199b1bb38f888d76de08723dd897f9bc73a6fbc005688e770d94ed1",
+    "vendoredFile": "frontend/src/dashboard/appliance-model.ts",
+    "vendoredSha256": "f754ffa16d8a43b3a162f64e3584fb45c4ca688ea0d0d6091d522de412c9450e"
+  },
+  "src/panels/emad-dashboard/catalog-visuals.ts": {
+    "sourceSha256": "064dd87edbc699f0c90c0c3e2dc74c45ed0b13e582cf04c5b952bea20fccf633",
+    "vendoredFile": "frontend/src/dashboard/catalog-visuals.ts",
+    "vendoredSha256": "3733b2fa2b4ee172aa2ffe98f10509678bffd61029c3b3f4b6112b3c598b4150"
+  },
+  "src/panels/emad-dashboard/cleaning-model.ts": {
+    "sourceSha256": "017f0ecaa72112a46d5811db000b0dae87c82a524a4052888fa0582b3c58907d",
+    "vendoredFile": "frontend/src/dashboard/cleaning-model.ts",
+    "vendoredSha256": "c449269a8f045acb83c6f2d59ba255ee843c9ca2862c76ccacd6af615a90572b"
+  },
+  "src/panels/emad-dashboard/dashboard-design-styles.ts": {
+    "sourceSha256": "09744b383c7c7f7a260d568a03f6fb4fb74c6a16a5113d3199a7f4614dcb7ea4",
+    "vendoredFile": "frontend/src/dashboard/dashboard-design-styles.ts",
+    "vendoredSha256": "654daf6b06ad01bc0e41d6051e36387f1d7d253fbbc354453e6c209795062177"
+  },
+  "src/panels/emad-dashboard/dashboard-model.ts": {
+    "sourceSha256": "58ca5cdf06497503e8094a1f513261bb67d11d7f3611a83c267f876dc5b1104a",
+    "vendoredFile": "frontend/src/dashboard/dashboard-model.ts",
+    "vendoredSha256": "5c8ef9356febdc9b818006170d4f386974de89a9093ac0136fcb1c0bd26b7f97"
+  },
+  "src/panels/emad-dashboard/device-catalog.ts": {
+    "sourceSha256": "f9b6758ded2f44cb8d595f2066cc0a1ae479b5c39ca21bfb63e742747076900e",
+    "vendoredFile": "frontend/src/dashboard/device-catalog.ts",
+    "vendoredSha256": "ecdb077f0c17482f838bc6a5ea61aca758adbc6a4608fe93d9584f5e36fc8a67"
+  },
+  "src/panels/emad-dashboard/device-interface.ts": {
+    "sourceSha256": "9ce20d3a294746b3c3464bffc03ce397b0a5f1482de61b207128113fd379b617",
+    "vendoredFile": "frontend/src/dashboard/device-interface.ts",
+    "vendoredSha256": "e9bdd23930661fe235e2b2511559b321c77e586343de05d3b8b11a128ef70a3c"
+  },
+  "src/panels/emad-dashboard/device-physical-profiles.ts": {
+    "sourceSha256": "8d735fd6db3beeff7057f420ebb7229f46948e88bcdcd2f8d88ebb6e84305835",
+    "vendoredFile": "frontend/src/dashboard/device-physical-profiles.ts",
+    "vendoredSha256": "8d735fd6db3beeff7057f420ebb7229f46948e88bcdcd2f8d88ebb6e84305835"
+  },
+  "src/panels/emad-dashboard/device-visual-state.ts": {
+    "sourceSha256": "127a81671f4797b21a319766f6387a7541a9f8b468eaf863187434955cde9567",
+    "vendoredFile": "frontend/src/dashboard/device-visual-state.ts",
+    "vendoredSha256": "127a81671f4797b21a319766f6387a7541a9f8b468eaf863187434955cde9567"
+  },
+  "src/panels/emad-dashboard/device-visuals.ts": {
+    "sourceSha256": "856fa7830f426ff4725f03cd52b1a62db3d8095887dbbb11b2dad9fe16d1fc53",
+    "vendoredFile": "frontend/src/dashboard/device-visuals.ts",
+    "vendoredSha256": "856fa7830f426ff4725f03cd52b1a62db3d8095887dbbb11b2dad9fe16d1fc53"
+  },
+  "src/panels/emad-dashboard/emad-dashboard-catalog-device.ts": {
+    "sourceSha256": "d45097584eb552b6ac54abe2122055ac394779617d5cb6af5ccafd6c8d4b365c",
+    "vendoredFile": "frontend/src/dashboard/emad-ui-catalog-device.ts",
+    "vendoredSha256": "146fc0d313b338b2aa1c28983ab12e4b3a81b59589df2009f0ba548f96c8b945"
+  },
+  "src/panels/emad-dashboard/emad-dashboard-device.ts": {
+    "sourceSha256": "e3889d111223f18bbab5482a9a2a4b8728f7047061f813601c8d04542d20f498",
+    "vendoredFile": "frontend/src/dashboard/emad-ui-device.ts",
+    "vendoredSha256": "1cf24687e69f294e5a0de6ae32fa31bce2aa81121c4d8222b3f62540acad83bb"
+  },
+  "src/panels/emad-dashboard/emad-device-entities.ts": {
+    "sourceSha256": "c175df7ba946412dd1d721591b513bd5a9e55ff5503697ff44f950b7ff4a5522",
+    "vendoredFile": "frontend/src/dashboard/emad-ui-device-entities.ts",
+    "vendoredSha256": "8a046787f3efc19c64839c7cbc9e12f7fe15e22d0583d178cc8e2366e83ce0d1"
+  },
+  "src/panels/emad-dashboard/emad-device-library.ts": {
+    "sourceSha256": "c114159c5860c663fd5654011095a1bd5a1e8b52640ca02904aea39122dac356",
+    "vendoredFile": "frontend/src/dashboard/emad-ui-device-library.ts",
+    "vendoredSha256": "cd49cd8f2f85559804b93ab48fe2e540453968395c443a7b0d36b147c31896f3"
+  },
+  "src/panels/emad-dashboard/ha-panel-emad-dashboard.ts": {
+    "sourceSha256": "e8fc263e7729480824debbf46675873c8a7d4a552cfea829e1103f3a2664d9c1",
+    "vendoredFile": "frontend/src/dashboard/emad-dashboard-view.ts",
+    "vendoredSha256": "05e274dae0b26cea589cea119803c1bc9fe7a5396eebb7f9da3834f47642512b"
+  },
+  "src/panels/emad-dashboard/home-assistant-compat.ts": {
+    "sourceSha256": "025ec8865558d44a7ef070144c8e9449a6054904988be580fbf71090f83fedef",
+    "vendoredFile": "frontend/src/dashboard/home-assistant-compat.ts",
+    "vendoredSha256": "a731cbb5d2a2333d08261694a8e780b7c84b9aacd57ffa4383fe70617d031f0c"
+  },
+  "src/panels/emad-dashboard/isometric-primitives.ts": {
+    "sourceSha256": "c47c71b71cc8e04d7f1be87b3070c92c6923413bf802ff0fc50d325d500e5624",
+    "vendoredFile": "frontend/src/dashboard/isometric-primitives.ts",
+    "vendoredSha256": "d94959a31c902e05883184895cab61bb8bed9480dda06973d8c7eb18309d0c84"
+  },
+  "src/panels/emad-dashboard/lighting-model.ts": {
+    "sourceSha256": "b80ec19f4af05ef30530ce237cb7a61b2b185477fc84f0ea0e63ed611876bdbd",
+    "vendoredFile": "frontend/src/dashboard/lighting-model.ts",
+    "vendoredSha256": "3b350c10cbe1a579f418a7946c07973e68d419fab1cea6cd8b218205d49f2a6d"
+  },
+  "src/panels/emad-dashboard/occupancy-model.ts": {
+    "sourceSha256": "e95428f9c2b76d70aa21b77921eb8a50887d23492c7916eab82b0ab28dca3415",
+    "vendoredFile": "frontend/src/dashboard/occupancy-model.ts",
+    "vendoredSha256": "aa7227ecfe78562d8b27300650d24b25e5f0f45f7802dc541358a30daa886b53"
+  },
+  "src/panels/emad-dashboard/parking-model.ts": {
+    "sourceSha256": "06736585b86751bd313bcbdf6550e58b104466233ba7117eca04cb249615149a",
+    "vendoredFile": "frontend/src/dashboard/parking-model.ts",
+    "vendoredSha256": "7079ca1c1cd55a7b782cf6294fb40719d4bf11fa4c790e351f55fa27971a6681"
+  },
+  "src/panels/emad-dashboard/physical-appliance-realism-styles.ts": {
+    "sourceSha256": "71b90980820a59f02a3e32dd70101de322044e6549cdca908d476459ee84e554",
+    "vendoredFile": "frontend/src/dashboard/physical-appliance-realism-styles.ts",
+    "vendoredSha256": "71b90980820a59f02a3e32dd70101de322044e6549cdca908d476459ee84e554"
+  },
+  "src/panels/emad-dashboard/physical-appliance-realism.ts": {
+    "sourceSha256": "4b4eaef379b16aae600417e216bb1ca676363b090c88a05798024043cf5370ac",
+    "vendoredFile": "frontend/src/dashboard/physical-appliance-realism.ts",
+    "vendoredSha256": "b67001a15b212bf354146998ee22183bf6ea53aaf4b56a320e17f7f0aa295f1a"
+  },
+  "src/panels/emad-dashboard/physical-appliances.ts": {
+    "sourceSha256": "ba18522c824dc45ce832a7bc914186f023ae75805e5e5eacc1f39005a72f0e84",
+    "vendoredFile": "frontend/src/dashboard/physical-appliances.ts",
+    "vendoredSha256": "ee87df018a445793380ae95c98e16a893eb164d96d3fd1ffaaad80e411934c95"
+  },
+  "src/panels/emad-dashboard/physical-architecture.ts": {
+    "sourceSha256": "9b4d474315b2d0ab026643b337ad9738d7d239b232b71b9509c46155304ad3d0",
+    "vendoredFile": "frontend/src/dashboard/physical-architecture.ts",
+    "vendoredSha256": "2c9c970a508a8b07606f19c1c4fb5f6631045b6da250eb3c29521e153a945753"
+  },
+  "src/panels/emad-dashboard/physical-cameras.ts": {
+    "sourceSha256": "45119b821f2367113c472a6ca7b79f05175bd152beead37e12a7669cdc38916c",
+    "vendoredFile": "frontend/src/dashboard/physical-cameras.ts",
+    "vendoredSha256": "8f6c262389c728d08789d82f87fef824d1e2eca2d2c989d1e670fdc9cac1cf51"
+  },
+  "src/panels/emad-dashboard/physical-cleaning-styles.ts": {
+    "sourceSha256": "04f1f208e3866c1ef01ad97e1163afc0ee9f972e7ab0c68d1688e9aabc0cda3a",
+    "vendoredFile": "frontend/src/dashboard/physical-cleaning-styles.ts",
+    "vendoredSha256": "04f1f208e3866c1ef01ad97e1163afc0ee9f972e7ab0c68d1688e9aabc0cda3a"
+  },
+  "src/panels/emad-dashboard/physical-cleaning.ts": {
+    "sourceSha256": "6c30751ca42449bcf0f75c48671e9a9552fe8ba25ccc45a53c96b36bee680712",
+    "vendoredFile": "frontend/src/dashboard/physical-cleaning.ts",
+    "vendoredSha256": "7e27782640dc333de13887c472d0f1858fb4d7aa3b167eb538f068900fbf73ec"
+  },
+  "src/panels/emad-dashboard/physical-device-styles.ts": {
+    "sourceSha256": "61f923913b1d278644b72ebef2f5da723210d21c4510aa6853fad28a8445d811",
+    "vendoredFile": "frontend/src/dashboard/physical-device-styles.ts",
+    "vendoredSha256": "61f923913b1d278644b72ebef2f5da723210d21c4510aa6853fad28a8445d811"
+  },
+  "src/panels/emad-dashboard/physical-electrical.ts": {
+    "sourceSha256": "50019a649438f12eb241ff299674e39e59fccd53ff55c4c38de242671791bbc3",
+    "vendoredFile": "frontend/src/dashboard/physical-electrical.ts",
+    "vendoredSha256": "71c1662ca5b0529db1737bab3e125454383a45dd60b2fbed6f795a466471af5a"
+  },
+  "src/panels/emad-dashboard/physical-elevators.ts": {
+    "sourceSha256": "a60ae2773a36dd5be5edc3a4e94506620803eaa0438effcc9db716e1835242a4",
+    "vendoredFile": "frontend/src/dashboard/physical-elevators.ts",
+    "vendoredSha256": "db68f0143fe98d49a4f68f19e26f1f671e860f9c0a62c978cd84279bd6d7890f"
+  },
+  "src/panels/emad-dashboard/physical-lighting-styles.ts": {
+    "sourceSha256": "32e5f8824e5cee2e7578ba563b88b34cbc10d9bd3944799a59f22743a8b64f4f",
+    "vendoredFile": "frontend/src/dashboard/physical-lighting-styles.ts",
+    "vendoredSha256": "32e5f8824e5cee2e7578ba563b88b34cbc10d9bd3944799a59f22743a8b64f4f"
+  },
+  "src/panels/emad-dashboard/physical-lighting.ts": {
+    "sourceSha256": "d8663bfe93d8edd6ae364b104ee1017462fd1b557e834719eaff73ddf6f01f13",
+    "vendoredFile": "frontend/src/dashboard/physical-lighting.ts",
+    "vendoredSha256": "9ad9466a290b92a677a2cc14b499018947589f8364ffe175467137ae5de840d5"
+  },
+  "src/panels/emad-dashboard/physical-mechanical.ts": {
+    "sourceSha256": "53b019f7c2351f7546d9a30628aa5f2bbdb6581df823b6d7be34613219eaa143",
+    "vendoredFile": "frontend/src/dashboard/physical-mechanical.ts",
+    "vendoredSha256": "3ed4eb73c715b30cbfa03ef41b2dffa61bdfb6f2ee56b1e6627694ce914c6779"
+  },
+  "src/panels/emad-dashboard/physical-occupancy-styles.ts": {
+    "sourceSha256": "d69b719b1c666644f9beda77b34bed8b8e416b54d0abd8433c5f6e73c12ef60f",
+    "vendoredFile": "frontend/src/dashboard/physical-occupancy-styles.ts",
+    "vendoredSha256": "d69b719b1c666644f9beda77b34bed8b8e416b54d0abd8433c5f6e73c12ef60f"
+  },
+  "src/panels/emad-dashboard/physical-occupancy.ts": {
+    "sourceSha256": "cee5566d78cdcd41b8030bcfb16afff8cfbac79f688e3764f365e7422a6b5d1b",
+    "vendoredFile": "frontend/src/dashboard/physical-occupancy.ts",
+    "vendoredSha256": "340ad50198219aa62b458489a9f4fa059e936b9a45f0d25776afd2c6ef353d37"
+  },
+  "src/panels/emad-dashboard/physical-parking-styles.ts": {
+    "sourceSha256": "a79677034e23881f85040e1e8af85a02d4bb54fe6f377923e34d9a57cb4d0a12",
+    "vendoredFile": "frontend/src/dashboard/physical-parking-styles.ts",
+    "vendoredSha256": "a79677034e23881f85040e1e8af85a02d4bb54fe6f377923e34d9a57cb4d0a12"
+  },
+  "src/panels/emad-dashboard/physical-parking.ts": {
+    "sourceSha256": "85f62e65cc5b660fd8dc199ccea1976e4d9739e9332b9f36243c89ee90871e93",
+    "vendoredFile": "frontend/src/dashboard/physical-parking.ts",
+    "vendoredSha256": "d6ffeef347ed01b585dae6bd37397bb3906f22cfd485fd7c17c61f01072a3964"
+  },
+  "src/panels/emad-dashboard/physical-sensors.ts": {
+    "sourceSha256": "57d8fc05c73470b896c0c4b7496285f3d7ff0d0eae5f49dbe53a85bea9eedd36",
+    "vendoredFile": "frontend/src/dashboard/physical-sensors.ts",
+    "vendoredSha256": "9210b2e105a0e70465cb3ff198745b60584cb781f3363d7d97a0ee29ad7114c4"
+  },
+  "src/panels/emad-dashboard/physical-street-exit-styles.ts": {
+    "sourceSha256": "d9e94ba194c9dc1ff02cba6352411e731f6faf7b42ea72228b3707c00324b6e1",
+    "vendoredFile": "frontend/src/dashboard/physical-street-exit-styles.ts",
+    "vendoredSha256": "d9e94ba194c9dc1ff02cba6352411e731f6faf7b42ea72228b3707c00324b6e1"
+  },
+  "src/panels/emad-dashboard/physical-street-exit.ts": {
+    "sourceSha256": "95d58c38a461d84af47218d1e8506de01f6614002d77f21cf9e5c7c2441ed041",
+    "vendoredFile": "frontend/src/dashboard/physical-street-exit.ts",
+    "vendoredSha256": "242c4a3487578725a284078c886af489e133a28405ae51c4541ee5c577e98a56"
+  },
+  "src/panels/emad-dashboard/physical-treatment-styles.ts": {
+    "sourceSha256": "8745db93b3b94e1c210483b504157078935596ee096b0264a42e930a379e1bcf",
+    "vendoredFile": "frontend/src/dashboard/physical-treatment-styles.ts",
+    "vendoredSha256": "8745db93b3b94e1c210483b504157078935596ee096b0264a42e930a379e1bcf"
+  },
+  "src/panels/emad-dashboard/physical-treatment.ts": {
+    "sourceSha256": "ae40f27cb06a988d0b99ad66cb31d4b67e89ce525ff302bcb4db6ca5615b0d4f",
+    "vendoredFile": "frontend/src/dashboard/physical-treatment.ts",
+    "vendoredSha256": "96135151d50f78e0900fa90f6f8ea47292d1de7bf46e8db8ffdd804dbf539033"
+  },
+  "src/panels/emad-dashboard/physical-valves.ts": {
+    "sourceSha256": "f72c5578e2a6c421239c5988d6cfbd615977f69a3d23afa3d6a0b8a19e7f8320",
+    "vendoredFile": "frontend/src/dashboard/physical-valves.ts",
+    "vendoredSha256": "cfa27a1c6a0d52dc75e77a93c9b63010debc6e51894b6ab46e9051faf343f215"
+  },
+  "src/panels/emad-dashboard/physical-water-styles.ts": {
+    "sourceSha256": "75e5b30503b4ba319ee3c5e8ff8d53c8a3f52fadbab318fe1c9396fa370f4083",
+    "vendoredFile": "frontend/src/dashboard/physical-water-styles.ts",
+    "vendoredSha256": "75e5b30503b4ba319ee3c5e8ff8d53c8a3f52fadbab318fe1c9396fa370f4083"
+  },
+  "src/panels/emad-dashboard/physical-water.ts": {
+    "sourceSha256": "0384caae5b5b5422b03d0178ccb7e7773d02acce94149fc72976806534d785ca",
+    "vendoredFile": "frontend/src/dashboard/physical-water.ts",
+    "vendoredSha256": "c3e53c834a3f8018f5e7835cfc3a3a931ab6667e0f71a85cae3b2c2f67d1194e"
+  },
+  "src/panels/emad-dashboard/physical-weather-styles.ts": {
+    "sourceSha256": "428972016fb228057b3073bf6c81c6e934ae32a6f7c15c93a09ee0fd9c26ee44",
+    "vendoredFile": "frontend/src/dashboard/physical-weather-styles.ts",
+    "vendoredSha256": "428972016fb228057b3073bf6c81c6e934ae32a6f7c15c93a09ee0fd9c26ee44"
+  },
+  "src/panels/emad-dashboard/physical-weather.ts": {
+    "sourceSha256": "0e57edd05efe8844b01c951b3aa633859a65030817dd8c9061c758fbd6bb55c1",
+    "vendoredFile": "frontend/src/dashboard/physical-weather.ts",
+    "vendoredSha256": "2012c0e45dea1c9b7055c8004677390d20a90cdf2c4fe85c3008bb424b71f8ad"
+  },
+  "src/panels/emad-dashboard/physical-wellness-styles.ts": {
+    "sourceSha256": "72253f230a8573061eae8b0c421c7a2b3851ec637b05327b1455723562512011",
+    "vendoredFile": "frontend/src/dashboard/physical-wellness-styles.ts",
+    "vendoredSha256": "72253f230a8573061eae8b0c421c7a2b3851ec637b05327b1455723562512011"
+  },
+  "src/panels/emad-dashboard/physical-wellness.ts": {
+    "sourceSha256": "a5ccad6219d1642bfce9b6f4e110f6a5d7f8a676b3fb4c314c23d74f13c00696",
+    "vendoredFile": "frontend/src/dashboard/physical-wellness.ts",
+    "vendoredSha256": "1e0b3af27f6abf322bba014345bbc697c9d652979deb15373fbcd3594956fa04"
+  },
+  "src/panels/emad-dashboard/responsive-card-styles.ts": {
+    "sourceSha256": "36e79234106c11624b51bcb1923648870d4176a0421b93c152aad934cec971d5",
+    "vendoredFile": "frontend/src/dashboard/responsive-card-styles.ts",
+    "vendoredSha256": "6d85f5cac54d6fa7a4ed41bb08d9cc71439789060fb509ecc49fc819eecbb911"
+  },
+  "src/panels/emad-dashboard/treatment-model.ts": {
+    "sourceSha256": "d80c4bd833f86a8d1061720ca17e1bb45b93d8ed46ff98df7e2196b967e27576",
+    "vendoredFile": "frontend/src/dashboard/treatment-model.ts",
+    "vendoredSha256": "0c0a225178b86e0dcbe47f8fec91232fcc0fef83a4e3016b74887876bc4ef39a"
+  },
+  "src/panels/emad-dashboard/valve-model.ts": {
+    "sourceSha256": "4cdd3cb4a194e1c8c9aae67d8c9bbcea43a97879119366b1e1b953f5a89c88d9",
+    "vendoredFile": "frontend/src/dashboard/valve-model.ts",
+    "vendoredSha256": "e3e0f252e58b2aa338d6eea6c5428a1ceb9211dac526bdb8951c011108f1ea7d"
+  },
+  "src/panels/emad-dashboard/water-model.ts": {
+    "sourceSha256": "ca65ed0e48b51adb4174484053b317d2fcb2a4ee9b36dcdc7d4f8d922e1f0698",
+    "vendoredFile": "frontend/src/dashboard/water-model.ts",
+    "vendoredSha256": "005a40012d209990fbdf9f5f596e9b9484c142cf2d26952e3b0e2fd1f1ef82d1"
+  },
+  "src/panels/emad-dashboard/weather-model.ts": {
+    "sourceSha256": "147762fef8c61c1ea0c9cda2d70fffd5fc72bc73b91094288eab3ef6e330d011",
+    "vendoredFile": "frontend/src/dashboard/weather-model.ts",
+    "vendoredSha256": "2aa69b7b3e055bb4f6080d5aa4646d906d42f04b40e957e24c1a62929e84c0f2"
+  },
+  "src/panels/emad-dashboard/wellness-model.ts": {
+    "sourceSha256": "6ae2d1125aa467731b223b1ac8d458053a4ad5ff21595c5d861b638e0f178e12",
+    "vendoredFile": "frontend/src/dashboard/wellness-model.ts",
+    "vendoredSha256": "f3c5b83bb6096b4cb5034a45cb19c410311b0fe07fb6dc626939016edad73d93"
+  },
+  "src/panels/emad-connect/emad-isometric-scene.ts": {
+    "sourceSha256": "5bde667f26223978e102b8c60a3057ef6330ac1d8e66c01f0104bd4d7adc3b66",
+    "vendoredFile": "frontend/src/platform/emad-ui-isometric-scene.ts",
+    "vendoredSha256": "ad2b839c3f5def598b6fc58ad94259626951faf035c578a0a004835a3027a390"
+  }
+}

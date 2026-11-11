@@ -1,0 +1,68 @@
+name: Validate
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+  workflow_call:
+permissions:
+  contents: read
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
+        with:
+          node-version: '24'
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: '3.14'
+          cache: pip
+          cache-dependency-path: requirements-test.txt
+      - name: Install frontend build tools
+        run: npm ci --ignore-scripts --no-audit --no-fund
+        working-directory: frontend
+      - name: Check and test all device cards
+        working-directory: frontend
+        run: |
+          npm run typecheck
+          npm run format:check
+          npm test
+          npm run build
+      - name: Require the committed compiled frontend to match source
+        run: git diff --exit-code -- custom_components/emad_dashboard/frontend
+      - name: Install Home Assistant test harness
+        run: python -m pip install -r requirements-test.txt
+      - name: Fetch the official pinned HACS installer
+        run: python scripts/fetch-hacs.py "$RUNNER_TEMP/hacs-runtime"
+      - name: Test backend and real HACS install, update and rollback
+        env:
+          PYTHONPATH: ${{ runner.temp }}/hacs-runtime
+          PYTHONDONTWRITEBYTECODE: '1'
+        run: python -m pytest -c pytest.ini tests hacs_tests
+      - name: Build and validate release archives
+        run: python scripts/package.py
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7
+        with:
+          name: emad-dashboard-packages
+          path: dist/
+          retention-days: 7
+  hacs:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+      - uses: hacs/action@1ebf01c408f29afcb6406bd431bc98fd8cbb15aa # main, pinned
+        with:
+          category: integration
+          comment: 'false'
+  hassfest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+      - uses: home-assistant/actions/hassfest@86d4564712fa02543c808e3a693dd04f9d3f8361 # master, pinned

@@ -1,0 +1,14 @@
+{
+  "title": "Emad Dashboard",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Add Emad Dashboard",
+        "description": "Add the Emad dashboard to the sidebar. Devices and services use your existing Home Assistant connection. No cloud account is required."
+      }
+    },
+    "abort": {
+      "already_configured": "Already configured"
+    }
+  }
+}

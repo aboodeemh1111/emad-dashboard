@@ -1,0 +1,13 @@
+{
+  "repository": "aboodeemh1111/emad-dashboard",
+  "description": "Emad-style dashboard for standard Home Assistant with 488 responsive device cards and native controls.",
+  "topics": [
+    "hacs",
+    "home-assistant",
+    "custom-component",
+    "dashboard",
+    "emad"
+  ],
+  "tag_prefix": "v",
+  "hacs_asset": "emad_dashboard.zip"
+}

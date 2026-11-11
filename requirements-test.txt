@@ -1,0 +1,2 @@
+# Includes Home Assistant Core 2026.8.3 and the matching HA fixtures.
+pytest-homeassistant-custom-component==0.13.357

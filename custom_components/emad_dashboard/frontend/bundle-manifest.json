@@ -1,0 +1,26 @@
+{
+  "version": "0.1.1",
+  "entrypoint": "emad-dashboard.8c79bfc33f3ca215.js",
+  "sha256": "8c79bfc33f3ca2153c824dd1d217de117747fc2dbefc03b4c211851dde35ed6f",
+  "sizeBytes": 1151418,
+  "deviceTypes": 488,
+  "systems": 30,
+  "sourceUiModules": 55,
+  "customElements": [
+    "emad-dashboard-panel",
+    "emad-dashboard-view",
+    "emad-ui-alert",
+    "emad-ui-camera",
+    "emad-ui-catalog-device",
+    "emad-ui-confirmation",
+    "emad-ui-device",
+    "emad-ui-device-entities",
+    "emad-ui-device-library",
+    "emad-ui-isometric-scene",
+    "emad-ui-logo",
+    "emad-ui-menu-button",
+    "emad-ui-spinner",
+    "emad-ui-svg-icon"
+  ],
+  "selfContained": true
+}

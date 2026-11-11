@@ -1,0 +1,1 @@
+{"domain": "emad_dashboard_fixture", "name": "Emad verification devices", "version": "0.0.0", "config_flow": true, "codeowners": [], "dependencies": ["light", "climate", "cover", "fan", "sensor", "number", "select", "button", "camera"], "requirements": []}

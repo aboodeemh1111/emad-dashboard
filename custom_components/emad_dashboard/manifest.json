@@ -1,0 +1,21 @@
+{
+  "domain": "emad_dashboard",
+  "name": "Emad Dashboard",
+  "codeowners": [
+    "@aboodeemh1111"
+  ],
+  "config_flow": true,
+  "dependencies": [
+    "frontend",
+    "http",
+    "panel_custom",
+    "websocket_api"
+  ],
+  "documentation": "https://github.com/aboodeemh1111/emad-dashboard#readme",
+  "integration_type": "service",
+  "iot_class": "local_push",
+  "issue_tracker": "https://github.com/aboodeemh1111/emad-dashboard/issues",
+  "requirements": [],
+  "single_config_entry": true,
+  "version": "0.1.1"
+}

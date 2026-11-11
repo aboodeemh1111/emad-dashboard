@@ -1,0 +1,20 @@
+Emad Dashboard
+
+The Emad dashboard UI and its Home Assistant frontend adaptations are derived
+from the EMAD Home Assistant frontend checkout and distributed under Apache 2.0.
+See LICENSE and the source vendor-manifest.json for source provenance.
+
+Bundled runtime components:
+- Lit, lit-html, lit-element, @lit/reactive-element: BSD-3-Clause
+- @mdi/js / Material Design Icons: Apache-2.0
+- memoize-one: MIT
+- tinykeys: MIT
+- Navigation click helper derived from Polymer pwa-helpers: BSD-3-Clause
+
+Original dependency license texts are in frontend/licenses/.
+Space Grotesk and Noto Sans Arabic font notices and SIL Open Font License 1.1
+are included in frontend/fonts/. Fonts use panel-specific family aliases.
+
+Home Assistant is a project of the Open Home Foundation. This is an independent
+custom integration, not an official Home Assistant integration or a frontend fork
+installation. No Home Assistant runtime code is replaced by this package.

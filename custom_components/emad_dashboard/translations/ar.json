@@ -1,0 +1,14 @@
+{
+  "title": "Emad Dashboard",
+  "config": {
+    "step": {
+      "user": {
+        "title": "إضافة لوحة عماد",
+        "description": "أضف لوحة عماد إلى الشريط الجانبي. تستخدم الأجهزة والخدمات اتصال Home Assistant الحالي. لا يلزم حساب سحابي."
+      }
+    },
+    "abort": {
+      "already_configured": "تم الإعداد مسبقًا"
+    }
+  }
+}

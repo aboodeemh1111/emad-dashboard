@@ -1,0 +1,43 @@
+name: Release
+on:
+  push:
+    tags: ['v*']
+permissions:
+  contents: read
+jobs:
+  validate:
+    uses: ./.github/workflows/validate.yml
+  publish:
+    needs: validate
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
+        with:
+          node-version: '24'
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: '3.14'
+      - run: npm ci --ignore-scripts --no-audit --no-fund
+        working-directory: frontend
+      - run: npm run build
+        working-directory: frontend
+      - name: Check tag, all version declarations, and required release notes
+        env:
+          RELEASE_TAG: ${{ github.ref_name }}
+        run: |
+          python scripts/package.py dist "$RELEASE_TAG"
+          python -c 'import os,pathlib; tag=os.environ["RELEASE_TAG"]; assert pathlib.Path("releases",tag.removeprefix("v")+".md").is_file(), "Missing release notes"'
+      - name: Publish the compiled HACS asset and checksums
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RELEASE_TAG: ${{ github.ref_name }}
+        run: |
+          release_flags=()
+          if [[ "$RELEASE_TAG" == *-* ]]; then release_flags+=(--prerelease); fi
+          gh release create "$RELEASE_TAG" "${release_flags[@]}" dist/emad_dashboard.zip dist/emad_dashboard-*.zip dist/SHA256SUMS dist/release-manifest.json --verify-tag --title "Emad Dashboard $RELEASE_TAG" --notes-file "releases/${RELEASE_TAG#v}.md"
