@@ -8,6 +8,7 @@ import hashlib
 from io import BytesIO
 import json
 import os
+import socket
 from pathlib import Path
 from zipfile import ZipFile
 
@@ -22,29 +23,40 @@ from .test_install_update import LAYOUT, VERSION, packaged_asset, repository, se
 
 pytestmark = pytest.mark.skipif(os.environ.get("EMAD_LIVE_HACS_RELEASE") != "1", reason="Public release test runs only after publication")
 REPOSITORY = "aboodeemh1111/emad-dashboard"
+RELEASE_TAG = os.environ.get("EMAD_LIVE_RELEASE_TAG", "v" + VERSION)
+RELEASE_VERSION = RELEASE_TAG.removeprefix("v")
+
+
+@pytest.fixture
+def public_release_network(socket_enabled, monkeypatch):
+    """Only explicit live checks opt out of the HA unit harness's network block."""
+    from pytest_homeassistant_custom_component.plugins import _real_getaddrinfo
+    from pytest_socket import _true_connect
+    monkeypatch.setattr(socket, "getaddrinfo", _real_getaddrinfo)
+    monkeypatch.setattr(socket.socket, "connect", _true_connect)
 
 
 @pytest.mark.parametrize("existing_install", [False, True], ids=["fresh-install", "update-from-0.1.0"])
-async def test_published_release_installs_through_hacs(repository, packaged_asset, existing_install):
+async def test_published_release_installs_through_hacs(repository, packaged_asset, existing_install, public_release_network):
     repo = repository
     if existing_install:
         await seed_previous_install(repo, packaged_asset)
     else:
         repo.data.first_install = True
-    async with aiohttp.ClientSession() as session:
+    async with aiohttp.ClientSession(connector=aiohttp.TCPConnector(resolver=aiohttp.ThreadedResolver())) as session:
         headers = {"Accept": "application/vnd.github+json", "User-Agent": "emad-dashboard-release-verification"}
         if token := os.environ.get("GITHUB_TOKEN"):
             headers["Authorization"] = "Bearer " + token
-        async with session.get(f"https://api.github.com/repos/{REPOSITORY}/releases/tags/v{VERSION}", headers=headers) as response:
+        async with session.get(f"https://api.github.com/repos/{REPOSITORY}/releases/tags/{RELEASE_TAG}", headers=headers) as response:
             assert response.status == 200
             release = await response.json()
-        assert release["tag_name"] == "v" + VERSION and not release["draft"]
+        assert release["tag_name"] == RELEASE_TAG and not release["draft"]
         assets = {asset["name"]: asset for asset in release["assets"]}
         assert "emad_dashboard.zip" in assets and "release-manifest.json" in assets
         async with session.get(assets["release-manifest.json"]["browser_download_url"]) as response:
             assert response.status == 200
             manifest = json.loads(await response.read())
-        async with session.get(f"https://raw.githubusercontent.com/{REPOSITORY}/v{VERSION}/hacs.json") as response:
+        async with session.get(f"https://raw.githubusercontent.com/{REPOSITORY}/{RELEASE_TAG}/hacs.json") as response:
             assert response.status == 200
             repo.repository_manifest = HacsManifest.from_dict(HACS_MANIFEST_JSON_SCHEMA(json.loads(await response.read())))
         repo.data.last_version = release["tag_name"]
@@ -67,7 +79,7 @@ async def test_published_release_installs_through_hacs(repository, packaged_asse
             assert archive.testzip() is None
             for name in archive.namelist():
                 assert (Path(repo.localpath) / name).read_bytes() == archive.read(name)
-        assert json.loads((Path(repo.localpath) / "manifest.json").read_text())["version"] == VERSION
+        assert json.loads((Path(repo.localpath) / "manifest.json").read_text())["version"] == RELEASE_VERSION
         bundle = json.loads((Path(repo.localpath) / "frontend/bundle-manifest.json").read_text())
         assert bundle["deviceTypes"] == 488 and bundle["systems"] == 30
         assert hashlib.sha256((Path(repo.localpath) / "frontend" / bundle["entrypoint"]).read_bytes()).hexdigest() == manifest["bundle"]["sha256"]

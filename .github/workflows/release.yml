@@ -2,6 +2,12 @@ name: Release
 on:
   push:
     tags: ['v*']
+  workflow_dispatch:
+    inputs:
+      release_tag:
+        description: 'Existing release tag to reverify, for example v0.1.1'
+        required: true
+        type: string
 permissions:
   contents: read
 jobs:
@@ -15,6 +21,8 @@ jobs:
       contents: write
     steps:
       - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          ref: ${{ inputs.release_tag || github.ref }}
       - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
         with:
           node-version: '24'
@@ -29,18 +37,23 @@ jobs:
         working-directory: frontend
       - name: Check tag, all version declarations, and required release notes
         env:
-          RELEASE_TAG: ${{ github.ref_name }}
+          RELEASE_TAG: ${{ inputs.release_tag || github.ref_name }}
         run: |
           python scripts/package.py dist "$RELEASE_TAG"
           python -c 'import os,pathlib; tag=os.environ["RELEASE_TAG"]; assert pathlib.Path("releases",tag.removeprefix("v")+".md").is_file(), "Missing release notes"'
       - name: Publish the compiled HACS asset and checksums
         env:
           GH_TOKEN: ${{ github.token }}
-          RELEASE_TAG: ${{ github.ref_name }}
+          RELEASE_TAG: ${{ inputs.release_tag || github.ref_name }}
         run: |
-          release_flags=()
-          if [[ "$RELEASE_TAG" == *-* ]]; then release_flags+=(--prerelease); fi
-          gh release create "$RELEASE_TAG" "${release_flags[@]}" dist/emad_dashboard.zip dist/emad_dashboard-*.zip dist/SHA256SUMS dist/release-manifest.json --verify-tag --title "Emad Dashboard $RELEASE_TAG" --notes-file "releases/${RELEASE_TAG#v}.md"
+          if gh release view "$RELEASE_TAG" >/dev/null 2>&1; then
+            gh release download "$RELEASE_TAG" --pattern release-manifest.json --dir "$RUNNER_TEMP/published-release"
+            python -c 'import json,os; from pathlib import Path; expected=json.loads(Path("dist/release-manifest.json").read_text()); actual=json.loads((Path(os.environ["RUNNER_TEMP"])/"published-release/release-manifest.json").read_text()); assert all(expected[k]["sha256"]==actual[k]["sha256"] for k in ["hacs","integration","source"]), "Published assets differ; refusing to overwrite"; print("Existing release checksums verified; assets unchanged")'
+          else
+            release_flags=()
+            if [[ "$RELEASE_TAG" == *-* ]]; then release_flags+=(--prerelease); fi
+            gh release create "$RELEASE_TAG" "${release_flags[@]}" dist/emad_dashboard.zip dist/emad_dashboard-*.zip dist/SHA256SUMS dist/release-manifest.json --verify-tag --title "Emad Dashboard $RELEASE_TAG" --notes-file "releases/${RELEASE_TAG#v}.md"
+          fi
 
   verify-published:
     needs: publish
@@ -62,5 +75,6 @@ jobs:
           PYTHONPATH: ${{ runner.temp }}/hacs-runtime
           PYTHONDONTWRITEBYTECODE: '1'
           EMAD_LIVE_HACS_RELEASE: '1'
+          EMAD_LIVE_RELEASE_TAG: ${{ inputs.release_tag || github.ref_name }}
           GITHUB_TOKEN: ${{ github.token }}
         run: python -m pytest -c pytest.ini hacs_tests/test_live_release.py
