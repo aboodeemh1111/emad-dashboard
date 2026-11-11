@@ -1,2 +1,4 @@
 # Includes Home Assistant Core 2026.8.3 and the matching HA fixtures.
 pytest-homeassistant-custom-component==0.13.357
+# Test fixtures disable automatic component dependency installs. Use the stock frontend.
+home-assistant-frontend==20260729.7
